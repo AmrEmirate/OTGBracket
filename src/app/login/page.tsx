@@ -84,7 +84,7 @@ export default function LoginPage() {
       {/* Brand Header */}
       <div className="text-center mb-xl">
         <h1 className="font-headline-lg-mobile text-headline-lg-mobile font-black text-on-background mb-sm tracking-tight drop-shadow-[0_0_15px_rgba(255,182,139,0.3)]">
-          Pro<span className="text-primary">Bracket</span>
+          OTG<span className="text-primary">Bracket</span>
         </h1>
         <p className="font-title-md text-title-md text-on-surface-variant max-w-[24rem] mx-auto">
           The ultimate tournament management platform for serious competitors.
