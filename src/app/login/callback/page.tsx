@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
-export default function CallbackPage() {
+function CallbackLogic() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -26,6 +26,10 @@ export default function CallbackPage() {
     }
   }, [router, searchParams]);
 
+  return null;
+}
+
+export default function CallbackPage() {
   return (
     <div className="min-h-screen bg-background flex flex-col items-center justify-center p-md">
       <div className="w-16 h-16 bg-primary/20 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
@@ -33,6 +37,9 @@ export default function CallbackPage() {
       </div>
       <h2 className="text-xl font-bold text-on-surface">Memproses Login...</h2>
       <p className="text-on-surface-variant mt-2">Mohon tunggu sebentar, Anda sedang dialihkan.</p>
+      <Suspense fallback={null}>
+        <CallbackLogic />
+      </Suspense>
     </div>
   );
 }
